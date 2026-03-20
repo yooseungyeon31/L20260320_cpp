@@ -7,15 +7,10 @@ public:
 	APlayer();
 	~APlayer();
 
-	
-	void Die(); 
-	void Collect(); //골드 모은다. 함수로
-	void Attack();//플레이어 공격한다.
+	void Attack();
+	void Collect();
+	void Die();
+	virtual void Move() override;
 
 	int Gold;
-	
-
-	
-	
 };
-

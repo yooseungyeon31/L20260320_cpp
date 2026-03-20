@@ -5,6 +5,7 @@
 #include "WildBoar.h"
 #include "Goblin.h"
 #include "Slime.h"
+#include <vector>
 
 using namespace std;
 
@@ -46,38 +47,80 @@ int main()
 	//총 10마리 안에서 각 몬스터들이 랜덤으로 생성되게 하기. 각각 필수로 생겨야하는
 	//갯수 조건으로 설정. 멧돼지 - 10마리 이하, 고블린- 5마리이하, 슬라임 4마리 이하
 
-	srand(time(nullptr));
+	//srand(time(nullptr));
 
-	AWildBoar* WildBoars = nullptr;
-	AGoblin* Goblins = nullptr;
-	ASlime* Slimes = nullptr;
+	//AWildBoar* WildBoars = nullptr;
+	//AGoblin* Goblins = nullptr;
+	//ASlime* Slimes = nullptr;
 
-	int WildBoarCount = rand() % 9 + 1;
-	int GoblinCount = rand() % 5 + 1;
-	int SlimeCount = rand() % 6 + 1;
+	//int WildBoarCount = rand() % 9 + 1;
+	//int GoblinCount = rand() % 5 + 1;
+	//int SlimeCount = rand() % 6 + 1;
 
-	WildBoars= new AWildBoar[WildBoarCount];
-	Goblins = new AGoblin[GoblinCount];
-	Slimes = new ASlime[SlimeCount];
+	//WildBoars= new AWildBoar[WildBoarCount];
+	//Goblins = new AGoblin[GoblinCount];
+	//Slimes = new ASlime[SlimeCount];
 
 
 
-		for (int i = 0; i < WildBoarCount; i++)
-		{
-			WildBoars[i].Move();
-		}
-		for (int i = 0; i < GoblinCount; i++)
-		{
-			Goblins[i].Move();
-		}
-		for (int i = 0; i < SlimeCount; i++)
-		{
-			Slimes[i].Move();
-		}
-		
-		delete[] WildBoars;
-		delete[] Goblins;
-		delete[] Slimes;
+	//	for (int i = 0; i < WildBoarCount; i++)
+	//	{
+	//		WildBoars[i].Move();
+	//	}
+	//	for (int i = 0; i < GoblinCount; i++)
+	//	{
+	//		Goblins[i].Move();
+	//	}
+	//	for (int i = 0; i < SlimeCount; i++)
+	//	{
+	//		Slimes[i].Move();
+	//	}
+	//	
+	//	delete[] WildBoars;
+	//	delete[] Goblins;
+	//	delete[] Slimes;
+	
+
+	//----------------------------------------------
+	//[][][] -> [][][][]
+	//º¹??
+	//[][][] ????
+	//STL Container
+	//TArray<AActor*>
+	std::vector<AActor*> Actors;
+
+	Actors.push_back(new AWildBoar());
+	Actors.push_back(new ASlime());
+	Actors.push_back(new APlayer());
+	Actors.push_back(new ASlime());
+	Actors.push_back(new AGoblin());
+	Actors.push_back(new AWildBoar());
+	Actors.push_back(new AWildBoar());
+	Actors.push_back(new ASlime());
+	Actors.push_back(new AGoblin());
+	Actors.push_back(new APlayer());
+	Actors.push_back(new APlayer());
+
+	//¸ð?? ¾×?? ???¿
+	//for (int i = 0; i < Actors.size(); ++i)
+	//{
+	//	Actors[i]->Move();
+	//}
+
+	for (const auto& Actor : Actors)
+	{
+		Actor->Move();
+	}
+
+
+	for (auto& Actor : Actors)
+	{
+		delete Actor;
+	}
+
+	Actors.clear();
+
+
 	
 	
 	
