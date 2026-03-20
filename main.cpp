@@ -44,26 +44,39 @@ int main()
 
 	//총 10마리 안에서 각 몬스터들이 랜덤으로 생성되게 하기. 각각 필수로 생겨야하는
 	//갯수 조건으로 설정. 멧돼지 - 10마리 이하, 고블린- 5마리이하, 슬라임 4마리 이하
-	AWildBoar WildBoar[10];
-	AGoblin Goblin[5];
-	ASlime Slime[20];
+
+	srand(time(nullptr));
+
+	AWildBoar* WildBoar = nullptr;
+	AGoblin* Goblin = nullptr;
+	ASlime* Slime = nullptr;
+
+	int WildBoarCount = rand() %9 + 1;
+	int GoblinCount = rand() % 5 + 1;
+	int SlimeCount = rand() % 6 + 1;
+
+	WildBoar = new AWildBoar[WildBoarCount];
+	Goblin = new AGoblin[GoblinCount];
+	Slime = new ASlime[SlimeCount];
 
 
 
-
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < WildBoarCount; i++)
 		{
 			WildBoar[i].Move();
 		}
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < GoblinCount; i++)
 		{
 			Goblin[i].Move();
 		}
-		for (int i = 0; i < 20; i++)
+		for (int i = 0; i < SlimeCount; i++)
 		{
 			Slime[i].Move();
 		}
-		srand((unsigned int)time(NULL));
+		
+		delete[] WildBoar;
+		delete[] Goblin;
+		delete[] Slime;
 	
 	
 	
