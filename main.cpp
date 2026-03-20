@@ -5,7 +5,7 @@
 #include "WildBoar.h"
 #include "Goblin.h"
 #include "Slime.h"
-#define SIZE
+
 using namespace std;
 
 //-----------------------------------------
@@ -21,6 +21,7 @@ using namespace std;
 //동사: 있습니다, 가지고 있다. 움직일 수 있다. 공격한다.드랍한다ㅏ. 모은다.
 //--------------------------------------------
 //엔진의 기능: initialize, Run, Terminate, input,  tick, Render
+
 int main()
 {
 	//UEngine* MyEngine = new UEngine(); //엔진에 새로운 엔진을 생성해주고
@@ -47,36 +48,36 @@ int main()
 
 	srand(time(nullptr));
 
-	AWildBoar* WildBoar = nullptr;
-	AGoblin* Goblin = nullptr;
-	ASlime* Slime = nullptr;
+	AWildBoar* WildBoars = nullptr;
+	AGoblin* Goblins = nullptr;
+	ASlime* Slimes = nullptr;
 
-	int WildBoarCount = rand() %9 + 1;
+	int WildBoarCount = rand() % 9 + 1;
 	int GoblinCount = rand() % 5 + 1;
 	int SlimeCount = rand() % 6 + 1;
 
-	WildBoar = new AWildBoar[WildBoarCount];
-	Goblin = new AGoblin[GoblinCount];
-	Slime = new ASlime[SlimeCount];
+	WildBoars= new AWildBoar[WildBoarCount];
+	Goblins = new AGoblin[GoblinCount];
+	Slimes = new ASlime[SlimeCount];
 
 
 
 		for (int i = 0; i < WildBoarCount; i++)
 		{
-			WildBoar[i].Move();
+			WildBoars[i].Move();
 		}
 		for (int i = 0; i < GoblinCount; i++)
 		{
-			Goblin[i].Move();
+			Goblins[i].Move();
 		}
 		for (int i = 0; i < SlimeCount; i++)
 		{
-			Slime[i].Move();
+			Slimes[i].Move();
 		}
 		
-		delete[] WildBoar;
-		delete[] Goblin;
-		delete[] Slime;
+		delete[] WildBoars;
+		delete[] Goblins;
+		delete[] Slimes;
 	
 	
 	
