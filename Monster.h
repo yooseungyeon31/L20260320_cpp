@@ -1,12 +1,20 @@
 #pragma once
-class AMonster
-{
+#include "Actor.h"
 
+class AMonster : public AActor
+{
 public:
 	AMonster();
 	~AMonster();
 
-	void Move(); //움직일 수 있다.함수로
-	void MonsterAttack(); //공격할 수 있다 함수로
-};
+	void Die();
+	void Attack();
+	void Drop();
 
+	void Move();
+
+	//int X;
+
+
+	int Gold;
+};

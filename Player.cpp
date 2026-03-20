@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Player.h"
+#include "Slime.h"
 
 
 
@@ -11,27 +12,21 @@ APlayer::APlayer()
 
 
 
-void APlayer::Move()
-{
 
 
-	std::cout << "플레이어 움직임" << std::endl;
-
-
-
-}
-
-void APlayer::GoldDrop()
+void APlayer::Die()
 {
 }
 
-void APlayer::GetGold()
+void APlayer::Collect()
 {
 }
 
-void APlayer::PlayerAttack()
+void APlayer::Attack()
 {
 }
+
+
 
 APlayer::~APlayer()
 {

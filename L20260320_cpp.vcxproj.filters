@@ -30,10 +30,7 @@
     <ClCompile Include="Goblin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WildPig.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Gold.cpp">
+    <ClCompile Include="WildBoar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
@@ -59,10 +56,7 @@
     <ClInclude Include="Goblin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WildPig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Gold.h">
+    <ClInclude Include="WildBoar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">

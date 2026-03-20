@@ -1,5 +1,5 @@
 #include "Monster.h"
-#include "Player.h"
+#include <iostream>
 
 AMonster::AMonster()
 {
@@ -9,12 +9,8 @@ AMonster::~AMonster()
 {
 }
 
+
 void AMonster::Move()
 {
+	std::cout << "AMonster" << std::endl;
 }
-
-void AMonster::MonsterAttack()
-{
-}
-
-

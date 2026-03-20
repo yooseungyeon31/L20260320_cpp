@@ -4,5 +4,8 @@ class AActor
 public:
 	AActor();
 	~AActor();
+
+	void Move();
+
 };
 

@@ -3,9 +3,10 @@
 
 class ASlime : public AMonster
 {
-
 public:
 	ASlime();
 	~ASlime();
-};
 
+
+	void Move();
+};
